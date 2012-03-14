@@ -1,0 +1,1 @@
+C:\eclipseSzkolenia\workspace\web-services\web-services\m2_cw1_client\src>wsimport -s . -Xnocompile -p pl.szkolenie.ws http://localhost:9999/UsersRepository?wsdl
