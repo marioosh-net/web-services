@@ -9,8 +9,10 @@ import javax.xml.bind.annotation.XmlType;
 public class Phone {
 	private String number;
 
+	/*
 	public Phone() {
 	}
+	*/
 
 	public Phone(String number) {
 		super();

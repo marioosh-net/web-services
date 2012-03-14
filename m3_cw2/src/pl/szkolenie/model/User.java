@@ -11,6 +11,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import pl.szkolenie.model.adapter.PhoneAdapter;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -22,6 +25,7 @@ public class User {
 	@XmlAttribute
 	private String lastName;
 	
+	@XmlJavaTypeAdapter(PhoneAdapter.class)
 	@XmlElementWrapper(name="phones")
 	@XmlElement(name="phone")
 	private Set<Phone> phones = new LinkedHashSet<Phone>();
