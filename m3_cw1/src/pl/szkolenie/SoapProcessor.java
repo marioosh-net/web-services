@@ -18,6 +18,8 @@ public class SoapProcessor {
 	public static void main(String[] args) throws SOAPException, IOException {
 		SoapProcessor processor = new SoapProcessor();
 		processor.makeRequest();
+		System.out.println("\\n");
+		processor.makeResponse();
 	}
 	
 	private void makeRequest() throws SOAPException, IOException {
@@ -29,5 +31,17 @@ public class SoapProcessor {
 		Name name = envelope.createName(OPERATION_NAME, PREFIX, NAMESPACE);
 		body.addBodyElement(name);
 		request.writeTo(System.out);
+	}
+	
+	private void makeResponse() throws SOAPException, IOException {
+		MessageFactory factory = MessageFactory.newInstance();
+		SOAPMessage response = factory.createMessage();
+		SOAPEnvelope envelope = response.getSOAPPart().getEnvelope();
+		SOAPBody body = response.getSOAPBody();
+		
+		Name name = envelope.createName(OPERATION_NAME, PREFIX, NAMESPACE);
+		body.addBodyElement(name);
+		body.addTextNode(System.currentTimeMillis() + "");
+		response.writeTo(System.out);
 	}
 }
