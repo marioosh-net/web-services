@@ -8,6 +8,7 @@ public class Consumer {
 		Weather service = new Weather();
 		WeatherSoap weatherService = service.getWeatherSoap();
 		
-		System.out.println(weatherService.getCityWeatherByZIP("79251"));
+		// 46582 - Warsaw
+		System.out.println(weatherService.getCityWeatherByZIP("46582"));
 	}
 }
