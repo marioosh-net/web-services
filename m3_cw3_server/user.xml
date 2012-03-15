@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user firstName="Jan" lastName="Kowalski">
+    <phones>
+        <phone>
+            <number>34-435-533</number>
+        </phone>
+        <phone>
+            <number>34-235-533</number>
+        </phone>
+        <phone>
+            <number>34-635-533</number>
+        </phone>
+    </phones>
+    <address street="Miła" house="2a" zipcode="54-323" city="Katowice"/>
+</user>
